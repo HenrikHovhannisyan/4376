@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato&family=Roboto:ital@1&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+/* Start Nav bar */
+.main_navbar {
+    background-color: #426E86;
+}
+
+/* End Nav bar */
+
+/* Start Slider */
+.slider {
+    margin-bottom: 215px;
+    height: 797px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slider-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* End Slider */
+
+/* Start Discover Our Business Expertise */
+#discover_business {
+    margin-bottom: 215px;
+}
+
+.discover_business_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.discover_business_text {
+    margin-top: 25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.dial {
+    color: #689f38;
+    display: inline-block;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 0px 8px rgb(240, 240, 242);
+    border-radius: 50%;
+}
+
+.dial p {
+    font-family: Poppins, Verdana, sans-serif;
+    font-style: normal;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dial canvas {
+    position: absolute;
+}
+
+.black_percent {
+    color: rgb(42 44 56);
+}
+
+.orange_percent {
+    color: rgb(249 77 28);
+}
+
+.discover_business_percent {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+
+/* End Discover Our Business Expertise */
+
+/* Start Company */
+#company {
+    margin-bottom: 160px;
+}
+
+.company_container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.company_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.125vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* End Company */
+
+/* Start Who We Are */
+#who_we_are {
+    margin-bottom: 160px;
+}
+
+.who_we_are_title,
+.who_we_are_title1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #426E86;
+}
+
+.who_we_are_title1 {
+    font-size: 30px;
+}
+
+.who_we_are_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.who_we_are_text_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.perc_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.wrapper {
+    width: 520px;
+    max-width: 100%;
+}
+
+.progress-bar {
+    height: 15px;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 0 10px inset rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.bar {
+    width: 0;
+    height: 100%;
+    background-color: #426E86;
+
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent
+    );
+
+    background-size: 30px 30px;
+    animation: move 2s linear infinite;
+    box-shadow: 2px 0 10px inset rgba(0, 0, 0, 0.2);
+    transition: width 2s ease-out;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+.perc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* End Who We Are */
+
+/* Start Why We Are Different */
+#why_we_different {
+    margin-bottom: 160px;
+}
+
+.why_we_different_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #426E86;
+}
+
+.why_we_different_title1 {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.why_we_different_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+/* End Why We Are Different */
+
+/* Start Pricing */
+#pricing_cover {
+    margin-bottom: 80px;
+}
+
+.pricing_content_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    color: #626262;
+}
+
+.pricing_content_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #666666;
+    max-width: 785px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#pricing_content {
+    margin-bottom: 65px;
+}
+
+.pricing {
+    max-width: 670px;
+    max-height: 895px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+
+.pricing_card_title {
+    background-color: #426E86;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.pricing_card_content {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.pricing_card_sum {
+    margin-bottom: 50px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 50px;
+    color: #426E86;
+}
+
+.pricing_card_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #585856;
+}
+
+.btn_pricing {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #426E86;
+    background: #FFFFFF;
+    border: 1px solid #426E86;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 65px;
+}
+
+.btn_pricing:hover {
+    color: #31556a;
+    background: #fdf7f7;
+    border: 1px solid #31556a;
+}
+
+/* End Pricing */
+
+/* Start Login */
+.login_container {
+    margin: 90px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.login_title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #424242;
+    margin-top: 35px;
+}
+
+.login_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #696969;
+    margin-top: 15px;
+    margin-bottom: 55px;
+}
+
+.btn_login {
+    background: #426E86;
+    border-radius: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 11px;
+    width: 100%;
+    margin-top: 55px;
+}
+
+.btn_login:hover {
+    background: #31556a;
+    color: #fdf7f7
+}
+
+.login_remember {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: start;
+    color: #424242!important;
+}
+
+.login_password_request {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: end;
+}
+
+.login_password_request a {
+    color: #426E86;
+}
+
+.login_create_account {
+    margin-top: 25px;
+    text-align: end;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #A0A0A0;
+}
+
+/* End Login */
+/* Star Register */
+.register_form {
+    padding: 65px 80px 135px;
+}
+.register_title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 24px;
+    text-align: center;
+    color: #424242;
+    margin-bottom: 65px;
+}
+
+.btn_register {
+    background-color: #426E86;
+    border-radius: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 13px;
+}
+
+.btn_register:hover {
+    background: #31556a;
+    color: #fdf7f7
+}
+
+/* End Register */
+
+/* Start Footer */
+footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #426E86;
+}
+
+/* End Footer */
+
+/* Start left-menu.blade.php */
+.left_menu {
+    padding: 0;
+    background-color: rgb(66, 110, 134);
+}
+
+.left_menu .nav .nav-item a.active{
+    background-color: rgb(25, 68, 90);
+}
+
+/* End left-menu.blade.php */
+
+
+/* Start index.blade.php */
+.phases_title {
+    color: rgb(66, 110, 134);
+}
+
+/* End index.blade.php */
