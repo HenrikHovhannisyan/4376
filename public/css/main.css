@@ -1,0 +1,34 @@
+.btn-person_details,
+.person_details {
+    background-color: #294453!important;
+    color: #ffffff;
+}
+
+.btn-financials,
+.financials {
+    background-color: #3A6075!important;
+    color: #ffffff;
+}
+.btn-hours_per_week,
+.hours_per_week {
+    background-color: #426E86 !important;
+    color: #ffffff;
+}
+
+.btn-revenue,
+.revenue {
+    background-color: #638EA6 !important;
+    color: #ffffff;
+}
+
+.btn-standard_cost,
+.standard_cost {
+    background-color: #9CBBCC !important;
+    color: #ffffff;
+}
+
+.btn-actual_hours,
+.actual_hours_cost {
+    background-color: #CBDFE9 !important;
+    color: #ffffff;
+}

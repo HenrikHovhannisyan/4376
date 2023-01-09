@@ -99,7 +99,7 @@ setTimeout(loading, 1000);
 
 /* End Who We Are */
 
-/* Start index.blade.php */
+/* Start Phases index.blade.php */
 $(document).ready(function () {
     $('#phases_table_totals').DataTable({
         paging: false,
@@ -113,9 +113,9 @@ $(document).ready(function () {
         searching: false,
     });
 });
-/* End index.blade.php */
+/* End Phases index.blade.php */
 
-/* Start index.blade.php */
+/* Start Task index.blade.php */
 $(document).ready(function () {
     $('#tasks_table_totals').DataTable({
         paging: false,
@@ -129,4 +129,66 @@ $(document).ready(function () {
         searching: false,
     });
 });
-/* End index.blade.php */
+/* End Task index.blade.php */
+
+/* Start Resource Plan index.blade.php */
+$(document).ready(function () {
+    $('#resource-plan_table').DataTable({
+        paging: false,
+        info: false,
+        searching: false,
+        ordering: false,
+    });
+});
+/* End Resource Plan index.blade.php */
+
+/* Start Resource Plan index.blade.php */
+function person_details() {
+    let element = document.querySelectorAll(".person_details");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_pd = document.getElementById('eye_pd');
+    eye_pd.classList.toggle('fa-eye');
+    eye_pd.classList.toggle('fa-eye-slash');
+}
+function financials() {
+    let element = document.querySelectorAll(".financials");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_f = document.getElementById('eye_f');
+    eye_f.classList.toggle('fa-eye');
+    eye_f.classList.toggle('fa-eye-slash');
+}
+function hours_per_week() {
+    let element = document.querySelectorAll(".hours_per_week");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_f = document.getElementById('eye_hw');
+    eye_f.classList.toggle('fa-eye');
+    eye_f.classList.toggle('fa-eye-slash');
+}
+function revenue() {
+    let element = document.querySelectorAll(".revenue");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_f = document.getElementById('eye_r');
+    eye_f.classList.toggle('fa-eye');
+    eye_f.classList.toggle('fa-eye-slash');
+}
+function standard_cost() {
+    let element = document.querySelectorAll(".standard_cost");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_f = document.getElementById('eye_sc');
+    eye_f.classList.toggle('fa-eye');
+    eye_f.classList.toggle('fa-eye-slash');
+}
+function actual_hours() {
+    let element = document.querySelectorAll(".actual_hours_cost");
+    element.forEach(el => el.classList.toggle('d-none'));
+
+    let eye_f = document.getElementById('eye_ah');
+    eye_f.classList.toggle('fa-eye');
+    eye_f.classList.toggle('fa-eye-slash');
+}
+/* End Resource Plan index.blade.php */

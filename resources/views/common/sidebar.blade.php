@@ -85,7 +85,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="" class="nav-link py-3 border-bottom {{ isActiveRoute('') }}">
+        <a href="{{ route('resourcePlan') }}" class="nav-link py-3 border-bottom {{ isActiveRoute('resourcePlan') }}">
             <img src="{{ asset('img/icons/4.png') }}" width="40" alt="">
             <p class="mb-0 text-white">Resource Plan</p>
         </a>

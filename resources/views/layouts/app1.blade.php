@@ -17,6 +17,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
     <link rel="stylesheet" href={{asset('css/style.css')}}>
+    <link rel="stylesheet" href={{asset('css/main.css')}}>
 
     <title>@yield('title')</title>
 </head>
