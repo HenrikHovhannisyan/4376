@@ -4,9 +4,9 @@
 @endsection
 
 @section('content')
+    @include('pages.dashboard.resource-plan.Insert-modal')
     <div class="container-fluid">
         <div class="row">
-            {{--            @include('common.sidebar')--}}
             <div class="col-8 col-md-10 mt-3 mb-3 mx-auto">
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -75,31 +75,31 @@
                 <div class="row mt-5">
                     <div class="w-100 bg-secondary py-3">
                         <div class="container-fluid">
-                            <button class="btn btn-success">
+                            <button type="button" class="btn btn-success mb-1 mt-1" data-bs-toggle="modal" data-bs-target="#exampleModalStaff">
                                 <i class="fa-sharp fa-solid fa-circle-plus"></i>
                                 Insert
                             </button>
-                            <button class="btn btn-person_details" onclick="person_details()">
+                            <button class="btn btn-person_details mb-1 mt-1" onclick="person_details()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_pd"></i>
                                 Person details
                             </button>
-                            <button class="btn btn-financials" onclick="financials()">
+                            <button class="btn btn-financials mb-1 mt-1" onclick="financials()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_f"></i>
                                 Financials
                             </button>
-                            <button class="btn btn-hours_per_week" onclick="hours_per_week()">
+                            <button class="btn btn-hours_per_week mb-1 mt-1" onclick="hours_per_week()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_hw"></i>
                                 Hours per week
                             </button>
-                            <button class="btn btn-revenue" onclick="revenue()">
+                            <button class="btn btn-revenue mb-1 mt-1" onclick="revenue()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_r"></i>
                                 Revenue
                             </button>
-                            <button class="btn btn-standard_cost" onclick="standard_cost()">
+                            <button class="btn btn-standard_cost mb-1 mt-1" onclick="standard_cost()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_sc"></i>
                                 Standard cost
                             </button>
-                            <button class="btn btn-actual_hours" onclick="actual_hours()">
+                            <button class="btn btn-actual_hours mb-1 mt-1" onclick="actual_hours()">
                                 <i class="fa-sharp fa-solid fa-eye" id="eye_ah"></i>
                                 Cost @ actual hours
                             </button>
@@ -183,66 +183,66 @@
                                 <td style="min-width: 200px">10032 | Odell Norris</td>
                                 {{-- Person details --}}
                                 <span>
-                                    <td class="person_details">SASS</td>
-                                    <td class="person_details">ABC</td>
-                                    <td class="person_details">AB</td>
-                                    <td class="person_details">ManSYD</td>
-                                    <td class="person_details">SYD</td>
-                                    <td class="person_details">110</td>
-                                    <td class="person_details">90</td>
-                                    <td class="person_details"></td>
-                                    <td class="person_details">50</td>
-                                    <td class="person_details"></td>
-                                    <td class="person_details"></td>
-                                    <td class="person_details"></td>
+                                    <td class="person_details person_details_td">SASS</td>
+                                    <td class="person_details person_details_td">ABC</td>
+                                    <td class="person_details person_details_td">AB</td>
+                                    <td class="person_details person_details_td">ManSYD</td>
+                                    <td class="person_details person_details_td">SYD</td>
+                                    <td class="person_details person_details_td">110</td>
+                                    <td class="person_details person_details_td">90</td>
+                                    <td class="person_details person_details_td"></td>
+                                    <td class="person_details person_details_td">50</td>
+                                    <td class="person_details person_details_td"></td>
+                                    <td class="person_details person_details_td"></td>
+                                    <td class="person_details person_details_td"></td>
                                 </span>
 
                                 {{-- Financials --}}
                                 <span>
-                                    <td class="financials">47.650</td>
-                                    <td class="financials">110</td>
-                                    <td class="financials">390</td>
-                                    <td class="financials">42.708</td>
-                                    <td class="financials"></td>
-                                    <td class="financials">42.708</td>
-                                    <td class="financials">100%</td>
-                                    <td class="financials">90%</td>
-                                    <td class="financials"></td>
+                                    <td class="financials financials_td">47.650</td>
+                                    <td class="financials financials_td">110</td>
+                                    <td class="financials financials_td">390</td>
+                                    <td class="financials financials_td">42.708</td>
+                                    <td class="financials financials_td"></td>
+                                    <td class="financials financials_td">42.708</td>
+                                    <td class="financials financials_td">100%</td>
+                                    <td class="financials financials_td">90%</td>
+                                    <td class="financials financials_td"></td>
                                 </span>
 
                                 {{-- Hours per week --}}
                                 <span>
                                     @for($i = 1; $i <= 6; $i++)
-                                        <td class="hours_per_week">40</td>
-                                        <td class="hours_per_week">40</td>
-                                        <td class="hours_per_week">20</td>
-                                        <td class="hours_per_week">10</td>
-                                        <td class="hours_per_week"></td>
+                                        <td class="hours_per_week hours_per_week_td">40</td>
+                                        <td class="hours_per_week hours_per_week_td">40</td>
+                                        <td class="hours_per_week hours_per_week_td">20</td>
+                                        <td class="hours_per_week hours_per_week_td">10</td>
+                                        <td class="hours_per_week hours_per_week_td"></td>
                                     @endfor
                                 </span>
 
                                 {{-- Revenue --}}
                                 <span>
                                     @for($i = 1; $i <= 6; $i++)
-                                        <td class="revenue">0</td>
-                                        <td class="revenue">4.180</td>
-                                        <td class="revenue">2.090</td>
-                                        <td class="revenue">1.045</td>
-                                        <td class="revenue">0</td>
+                                        <td class="revenue revenue_td">0</td>
+                                        <td class="revenue revenue_td">4.180</td>
+                                        <td class="revenue revenue_td">2.090</td>
+                                        <td class="revenue revenue_td">1.045</td>
+                                        <td class="revenue revenue_td">0</td>
                                     @endfor
                                 </span>
 
                                 {{-- Standard cost --}}
                                 <span>
                                     @for($i = 1; $i <= 30; $i++)
-                                        <td class="standard_cost"></td>
+                                        <td class="standard_cost standard_cost_td"></td>
                                     @endfor
                                 </span>
 
                                 {{-- Cost @ actual hours --}}
                                 <span>
                                     @for($i = 1; $i <= 30; $i++)
-                                        <td class="actual_hours_cost"></td>
+                                        <td class="actual_hours_cost actual_hours_cost_td"></td>
                                     @endfor
                                 </span>
                             </tr>
