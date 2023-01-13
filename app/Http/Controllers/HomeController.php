@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +29,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {
@@ -36,7 +41,7 @@ class HomeController extends Controller
     /**
      * User Profile
      * @param Nill
-     * @return View Profile
+     * @return Application|Factory|View
      * @author Shani Singh
      */
     public function getProfile()
@@ -46,8 +51,8 @@ class HomeController extends Controller
 
     /**
      * Update Profile
-     * @param $profileData
-     * @return Boolean With Success Message
+     * @param Request $request
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function updateProfile(Request $request)
@@ -83,8 +88,8 @@ class HomeController extends Controller
 
     /**
      * Change Password
-     * @param Old Password, New Password, Confirm New Password
-     * @return Boolean With Success Message
+     * @param Request $request
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function changePassword(Request $request)

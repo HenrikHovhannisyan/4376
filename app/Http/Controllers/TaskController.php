@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
-use App\Http\Requests\StoreTaskRequest;
-use App\Http\Requests\UpdateTaskRequest;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class TaskController extends Controller
@@ -35,10 +33,10 @@ class TaskController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreTaskRequest $request
+     * @param Request $request
      * @return void
      */
-    public function store(StoreTaskRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -46,10 +44,10 @@ class TaskController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Task $task
+     * @param int $id
      * @return void
      */
-    public function show(Task $task)
+    public function show($id)
     {
         //
     }
@@ -57,10 +55,10 @@ class TaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Task $task
+     * @param int $id
      * @return void
      */
-    public function edit(Task $task)
+    public function edit($id)
     {
         //
     }
@@ -68,11 +66,11 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param UpdateTaskRequest $request
-     * @param Task $task
+     * @param Request $request
+     * @param int $id
      * @return void
      */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +78,10 @@ class TaskController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Task $task
+     * @param int $id
      * @return void
      */
-    public function destroy(Task $task)
+    public function destroy($id)
     {
         //
     }

@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
@@ -33,7 +37,7 @@ class UserController extends Controller
     /**
      * List User
      * @param Nill
-     * @return Array $user
+     * @return Application|Factory|View
      * @author Shani Singh
      */
     public function index()
@@ -45,7 +49,7 @@ class UserController extends Controller
     /**
      * Create User
      * @param Nill
-     * @return Array $user
+     * @return Application|Factory|View
      * @author Shani Singh
      */
     public function create()
@@ -58,7 +62,7 @@ class UserController extends Controller
     /**
      * Store User
      * @param Request $request
-     * @return View Users
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function store(Request $request)
@@ -107,7 +111,7 @@ class UserController extends Controller
     /**
      * Update Status Of User
      * @param Integer $status
-     * @return List Page With Success
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function updateStatus($user_id, $status)
@@ -145,8 +149,8 @@ class UserController extends Controller
 
     /**
      * Edit User
-     * @param Integer $user
-     * @return Collection $user
+     * @param User $user
+     * @return Application|Factory|View
      * @author Shani Singh
      */
     public function edit(User $user)
@@ -160,8 +164,9 @@ class UserController extends Controller
 
     /**
      * Update User
-     * @param Request $request, User $user
-     * @return View Users
+     * @param Request $request , User $user
+     * @param User $user
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function update(Request $request, User $user)
@@ -209,7 +214,7 @@ class UserController extends Controller
     /**
      * Delete User
      * @param User $user
-     * @return Index Users
+     * @return RedirectResponse
      * @author Shani Singh
      */
     public function delete(User $user)

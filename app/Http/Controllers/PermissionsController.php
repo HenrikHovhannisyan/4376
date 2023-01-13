@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Permission;
 
@@ -25,7 +30,7 @@ class PermissionsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function index()
     {
@@ -39,7 +44,7 @@ class PermissionsController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function create()
     {
@@ -49,8 +54,8 @@ class PermissionsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
      */
     public function store(Request $request)
     {
@@ -60,7 +65,7 @@ class PermissionsController extends Controller
                 'name' => 'required',
                 'guard_name' => 'required'
             ]);
-    
+
             Permission::create($request->all());
 
             DB::commit();
@@ -69,14 +74,14 @@ class PermissionsController extends Controller
             DB::rollback();
             return redirect()->route('permissions.add')->with('error',$th->getMessage());
         }
-        
+
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -87,7 +92,7 @@ class PermissionsController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function edit($id)
     {
@@ -99,9 +104,9 @@ class PermissionsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function update(Request $request, $id)
     {
@@ -111,14 +116,14 @@ class PermissionsController extends Controller
                 'name' => 'required',
                 'guard_name' => 'required'
             ]);
-            
+
             $permission = Permission::whereId($id)->first();
 
             $permission->name = $request->name;
             $permission->guard_name = $request->guard_name;
             $permission->save();
-            
-            
+
+
             DB::commit();
             return redirect()->route('permissions.index')->with('success','Permissions updated successfully.');
         } catch (\Throwable $th) {
@@ -131,15 +136,15 @@ class PermissionsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function destroy($id)
     {
         DB::beginTransaction();
         try {
-    
+
             Permission::whereId($id)->delete();
-            
+
             DB::commit();
             return redirect()->route('permissions.index')->with('success','Permissions deleted successfully.');
         } catch (\Throwable $th) {

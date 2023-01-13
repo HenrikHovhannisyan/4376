@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ResourcePlan;
-use App\Http\Requests\StoreResourcePlanRequest;
-use App\Http\Requests\UpdateResourcePlanRequest;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class ResourcePlanController extends Controller
@@ -35,10 +33,10 @@ class ResourcePlanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreResourcePlanRequest $request
+     * @param Request $request
      * @return void
      */
-    public function store(StoreResourcePlanRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -46,10 +44,10 @@ class ResourcePlanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param ResourcePlan $resourcePlan
+     * @param int $id
      * @return void
      */
-    public function show(ResourcePlan $resourcePlan)
+    public function show($id)
     {
         //
     }
@@ -57,10 +55,10 @@ class ResourcePlanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param ResourcePlan $resourcePlan
+     * @param int $id
      * @return void
      */
-    public function edit(ResourcePlan $resourcePlan)
+    public function edit($id)
     {
         //
     }
@@ -68,11 +66,11 @@ class ResourcePlanController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param UpdateResourcePlanRequest $request
-     * @param ResourcePlan $resourcePlan
+     * @param Request $request
+     * @param int $id
      * @return void
      */
-    public function update(UpdateResourcePlanRequest $request, ResourcePlan $resourcePlan)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +78,10 @@ class ResourcePlanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param ResourcePlan $resourcePlan
+     * @param int $id
      * @return void
      */
-    public function destroy(ResourcePlan $resourcePlan)
+    public function destroy($id)
     {
         //
     }

@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Phase;
-use App\Http\Requests\StorePhaseRequest;
-use App\Http\Requests\UpdatePhaseRequest;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class PhaseController extends Controller
@@ -35,10 +33,10 @@ class PhaseController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StorePhaseRequest $request
+     * @param Request $request
      * @return void
      */
-    public function store(StorePhaseRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -46,10 +44,10 @@ class PhaseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Phase $phase
+     * @param int $id
      * @return void
      */
-    public function show(Phase $phase)
+    public function show($id)
     {
         //
     }
@@ -57,10 +55,10 @@ class PhaseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Phase $phase
+     * @param int $id
      * @return void
      */
-    public function edit(Phase $phase)
+    public function edit($id)
     {
         //
     }
@@ -68,11 +66,11 @@ class PhaseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param UpdatePhaseRequest $request
-     * @param Phase $phase
+     * @param Request $request
+     * @param int $id
      * @return void
      */
-    public function update(UpdatePhaseRequest $request, Phase $phase)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +78,10 @@ class PhaseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Phase $phase
+     * @param int $id
      * @return void
      */
-    public function destroy(Phase $phase)
+    public function destroy($id)
     {
         //
     }

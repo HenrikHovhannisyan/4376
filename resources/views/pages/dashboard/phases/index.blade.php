@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    {{ __('phases') }}
+    {{ __('Phases') }}
 @endsection
 
 @section('content')
