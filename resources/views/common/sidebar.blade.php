@@ -12,8 +12,8 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item nav-link py-3 border-bottom text-white">
-        <a class="nav-link" href="{{ route('home') }}">
+    <li class="nav-item nav-link pb-0 border-bottom text-white">
+        <a class="nav-link {{ isActiveRoute('home') }}" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt text-white"></i>
             <span>Dashboard</span></a>
     </li>
@@ -27,15 +27,15 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item nav-link py-3 border-bottom ">
-        <a class="nav-link collapsed text-white" href="#" data-toggle="collapse" data-target="#taTpDropDown"
+    <li class="nav-item nav-link pb-0 border-bottom ">
+        <a class="nav-link collapsed text-white {{ isActiveRoute('users.index') }} {{ isActiveRoute('users.create') }} {{ isActiveRoute('users.import') }}" href="#" data-toggle="collapse" data-target="#taTpDropDown"
             aria-expanded="true" aria-controls="taTpDropDown">
             <i class="fas fa-user-alt text-white"></i>
             <span>User Management</span>
         </a>
         <div id="taTpDropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">User Management:</h6>
+                <h6 class="collapse-header">User Management</h6>
                 <a class="collapse-item" href="{{ route('users.index') }}">List</a>
                 <a class="collapse-item" href="{{ route('users.create') }}">Add New</a>
                 <a class="collapse-item" href="{{ route('users.import') }}">Import Data</a>
@@ -53,8 +53,8 @@
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item nav-link py-3 border-bottom ">
-            <a class="nav-link collapsed text-white" href="#" data-toggle="collapse" data-target="#collapsePages"
+        <li class="nav-item nav-link pb-0 border-bottom ">
+            <a class="nav-link collapsed text-white {{ isActiveRoute('roles.index') }} {{ isActiveRoute('permissions.index') }}" href="#" data-toggle="collapse" data-target="#collapsePages"
                 aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder text-white"></i>
                 <span>Masters</span>
@@ -69,7 +69,6 @@
         </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
     @endhasrole
 
     <li class="nav-item">
