@@ -81,7 +81,7 @@
                                         <td style="">16</td>
                                         <td style="">4</td>
                                     @for($i = 1; $i <= 26; $i++)
-                                        <td style="">-</td>
+                                        <td class="text-center">-</td>
                                     @endfor
                                 </span>
                             </tr>
