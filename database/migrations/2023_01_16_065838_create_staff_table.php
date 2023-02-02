@@ -15,6 +15,20 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('grade');
+            $table->string('lob');
+            $table->string('shortLOB');
+            $table->string('bu');
+            $table->string('shortBU');
+            $table->string('practiceGroup');
+            $table->string('shortPG');
+            $table->string('office');
+            $table->string('rackRate');
+            $table->string('budRecovey');
+            $table->string('costRate');
+            $table->string('budgetUtil');
+            $table->string('fte');
             $table->timestamps();
         });
     }

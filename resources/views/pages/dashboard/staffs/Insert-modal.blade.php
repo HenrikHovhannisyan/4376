@@ -10,7 +10,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="{{ route('staff.store') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
@@ -86,7 +87,7 @@
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="rackRate">Rack Rate</label>
-                                <input type="text" name="rackRate" class="form-control" id="rackRate"
+                                <input type="number" name="rackRate" class="form-control" id="rackRate"
                                        placeholder="Rack Rate">
                             </div>
                         </div>
@@ -95,14 +96,14 @@
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="budRecovey">Bud. Recovey</label>
-                                <input type="text" name="budRecovey" class="form-control" id="budRecovey"
+                                <input type="number" name="budRecovey" class="form-control" id="budRecovey"
                                        placeholder="Bud. Recovey">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="costRate">Cost rate</label>
-                                <input type="text" name="costRate" class="form-control" id="costRate"
+                                <input type="number" name="costRate" class="form-control" id="costRate"
                                        placeholder="Cost rate">
                             </div>
                         </div>
@@ -111,20 +112,20 @@
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="budgetUtil">Budget util</label>
-                                <input type="text" name="budgetUtil" class="form-control" id="budgetUtil"
+                                <input type="number" name="budgetUtil" class="form-control" id="budgetUtil"
                                        placeholder="Budget util">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="fte">FTE</label>
-                                <input type="text" name="fte" class="form-control" id="fte"
+                                <input type="number" name="fte" class="form-control" id="fte"
                                        placeholder="FTE">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-success w-25">Add</button>
+                        <button type="submit" class="btn btn-success w-25">Add</button>
                     </div>
                 </form>
             </div>

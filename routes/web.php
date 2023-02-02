@@ -26,7 +26,7 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard'
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/phases', [PhaseController::class, 'index'])->name('phases');
 Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
-Route::get('/staff', [StaffController::class, 'index'])->name('staff');
+Route::resource('staff', StaffController::class);
 Route::get('/resource-plan', [ResourcePlanController::class, 'index'])->name('resourcePlan');
 Route::get('/resource-profile', [ResourceProfileController::class, 'index'])->name('resourceProfile');
 

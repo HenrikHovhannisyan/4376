@@ -114,7 +114,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="{{ route('staff') }}" class="nav-link py-3 border-bottom {{ isActiveRoute('staff') }}">
+        <a href="{{ route('staff.index') }}" class="nav-link py-3 border-bottom {{ isActiveRoute('staff.index') }}">
             <img src="{{ asset('img/icons/9.png') }}" width="40" alt="">
             <p class="mb-0 text-white">Staff</p>
         </a>
