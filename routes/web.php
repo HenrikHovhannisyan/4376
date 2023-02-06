@@ -26,15 +26,12 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard'
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/phases', [PhaseController::class, 'index'])->name('phases');
 Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
-Route::resource('staff', StaffController::class);
 Route::get('/resource-plan', [ResourcePlanController::class, 'index'])->name('resourcePlan');
 Route::get('/resource-profile', [ResourceProfileController::class, 'index'])->name('resourceProfile');
-
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Auth::routes();
 
@@ -70,8 +67,9 @@ Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
     Route::post('/upload-users', [UserController::class, 'uploadUsers'])->name('upload');
 
     Route::get('export/', [UserController::class, 'export'])->name('export');
-
-
-
 });
+
+//Staff
+Route::resource('staff', StaffController::class);
+Route::get('staff-export/', [StaffController::class, 'export'])->name('staff_export');
 

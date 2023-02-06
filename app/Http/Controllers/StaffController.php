@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\StaffExport;
 use App\Models\Staff;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -9,6 +10,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StaffController extends Controller
 {
@@ -122,5 +124,12 @@ class StaffController extends Controller
 
         return redirect()->route('staff.index')
             ->with('success','Staff deleted successfully.');
+    }
+
+
+
+    public function export()
+    {
+        return Excel::download(new StaffExport, 'staff.xlsx');
     }
 }
