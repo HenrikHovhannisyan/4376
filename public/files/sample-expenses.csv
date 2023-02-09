@@ -1,0 +1,4 @@
+phase,category,description,qty,costPerUnit,cost,recoveryPercent,recovery
+Build,Accommodation,Hotel,2,200,400,100,400
+Strategy,Travel,Flight,2,400,800,100,800
+Design,Printing,Design copies,5000,0.1,500,100,500

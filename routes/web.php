@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExpensController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PhaseController;
 use App\Http\Controllers\PricingController;
@@ -72,4 +73,9 @@ Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
 //Staff
 Route::resource('staff', StaffController::class);
 Route::get('staff-export/', [StaffController::class, 'export'])->name('staff_export');
+
+//Expenses
+Route::resource('expenses', ExpensController::class);
+Route::get('expenses-export/', [ExpensController::class, 'export'])->name('expenses_export');
+Route::post('/upload-expenses', [ExpensController::class, 'uploadExpenses'])->name('expensesUpload');
 
