@@ -93,11 +93,11 @@
                                         <td>{{ $item->office }}</td>
                                         <td>{{ $item->rackRate }}</td>
                                         <td>{{ $item->budRecovey }}%</td>
-                                        <td>{{ round(($item->rackRate * $item->budRecovey) / 100) }}</td>
+                                        <td>{{ $item->minRate }}</td>
                                         <td>{{ $item->costRate }}</td>
                                         <td>{{ $item->budgetUtil }}</td>
                                         <td>{{ $item->fte }}</td>
-                                        <td>{{ round($item->budgetUtil / 225, 2)}}</td>
+                                        <td>{{ $item->budgetUtil1 }}</td>
                                         <td>1</td>
                                         <td>{{ ++$i }}</td>
                                         <td>{{ $item->id + 10000 }} | {{ $item->name }}</td>

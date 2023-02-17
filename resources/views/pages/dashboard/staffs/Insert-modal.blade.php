@@ -17,14 +17,14 @@
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" name="name" class="form-control" id="name"
-                                       placeholder="Name">
+                                       placeholder="Name" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="grade">Grade</label>
                                 <input type="text" name="grade" class="form-control" id="grade"
-                                       placeholder="Grade">
+                                       placeholder="Grade" required>
                             </div>
                         </div>
                     </div>
@@ -33,14 +33,14 @@
                             <div class="form-group">
                                 <label for="lob">LOB</label>
                                 <input type="text" name="lob" class="form-control" id="lob"
-                                       placeholder="LOB">
+                                       placeholder="LOB" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="shortLOB">ShortLOB</label>
                                 <input type="text" name="shortLOB" class="form-control" id="shortLOB"
-                                       placeholder="ShortLOB">
+                                       placeholder="ShortLOB" required>
                             </div>
                         </div>
                     </div>
@@ -49,14 +49,14 @@
                             <div class="form-group">
                                 <label for="bu">BU</label>
                                 <input type="text" name="bu" class="form-control" id="bu"
-                                       placeholder="BU">
+                                       placeholder="BU" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="shortBU">ShortBU</label>
                                 <input type="text" name="shortBU" class="form-control" id="shortBU"
-                                       placeholder="ShortBU">
+                                       placeholder="ShortBU" required>
                             </div>
                         </div>
                     </div>
@@ -65,14 +65,14 @@
                             <div class="form-group">
                                 <label for="practiceGroup">Practice Group</label>
                                 <input type="text" name="practiceGroup" class="form-control" id="practiceGroup"
-                                       placeholder="Practice Group">
+                                       placeholder="Practice Group" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="shortPG">ShortPG</label>
                                 <input type="text" name="shortPG" class="form-control" id="shortPG"
-                                       placeholder="ShortPG">
+                                       placeholder="ShortPG" required>
                             </div>
                         </div>
                     </div>
@@ -81,14 +81,14 @@
                             <div class="form-group">
                                 <label for="office">Office</label>
                                 <input type="text" name="office" class="form-control" id="office"
-                                       placeholder="Office">
+                                       placeholder="Office" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="rackRate">Rack Rate</label>
                                 <input type="number" name="rackRate" class="form-control" id="rackRate"
-                                       placeholder="Rack Rate">
+                                       placeholder="Rack Rate" required>
                             </div>
                         </div>
                     </div>
@@ -97,14 +97,14 @@
                             <div class="form-group">
                                 <label for="budRecovey">Bud. Recovey</label>
                                 <input type="number" name="budRecovey" class="form-control" id="budRecovey"
-                                       placeholder="Bud. Recovey">
+                                       placeholder="Bud. Recovey" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="costRate">Cost rate</label>
                                 <input type="number" name="costRate" class="form-control" id="costRate"
-                                       placeholder="Cost rate">
+                                       placeholder="Cost rate" required>
                             </div>
                         </div>
                     </div>
@@ -113,14 +113,14 @@
                             <div class="form-group">
                                 <label for="budgetUtil">Budget util</label>
                                 <input type="number" name="budgetUtil" class="form-control" id="budgetUtil"
-                                       placeholder="Budget util">
+                                       placeholder="Budget util" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <div class="form-group">
                                 <label for="fte">FTE</label>
                                 <input type="number" name="fte" class="form-control" id="fte"
-                                       placeholder="FTE">
+                                       placeholder="FTE" required>
                             </div>
                         </div>
                     </div>

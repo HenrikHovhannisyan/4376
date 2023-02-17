@@ -21,8 +21,10 @@ class Staff extends Model
         'office',
         'rackRate',
         'budRecovey',
+        'minRate',
         'costRate',
         'budgetUtil',
         'fte',
+        'budgetUtil1',
     ];
 }

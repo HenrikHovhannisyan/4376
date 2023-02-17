@@ -67,12 +67,10 @@ class ExpensController extends Controller
             'recoveryPercent' => 'required|numeric',
         ]);
 
-        $data = $request->all();
+        $request['cost'] = $request['qty'] * $request['costPerUnit'];
+        $request['recovery'] = $request['cost'] * $request['recoveryPercent'] / 100;
 
-        $data['cost'] = $data['qty'] * $data['costPerUnit'];
-        $data['recovery'] = $data['cost'] * $data['recoveryPercent'] / 100;
-
-        Expens::create($data);
+        Expens::create($request->all());
 
         return redirect()->route('expenses.index')
             ->with('success','Expenses created successfully.');

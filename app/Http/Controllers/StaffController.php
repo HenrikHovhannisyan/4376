@@ -72,6 +72,9 @@ class StaffController extends Controller
             'fte' => 'required',
         ]);
 
+        $request['minRate'] =round(($request['rackRate'] * $request['budRecovey']) / 100);
+        $request['budgetUtil1'] =  round($request['budgetUtil'] / 225, 2);
+
         Staff::create($request->all());
 
         return redirect()->route('staff.index')

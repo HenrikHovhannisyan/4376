@@ -26,9 +26,11 @@ return new class extends Migration
             $table->string('office');
             $table->string('rackRate');
             $table->string('budRecovey');
+            $table->string('minRate');
             $table->string('costRate');
             $table->string('budgetUtil');
             $table->string('fte');
+            $table->string('budgetUtil1');
             $table->timestamps();
         });
     }
